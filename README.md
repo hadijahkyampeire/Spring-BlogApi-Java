@@ -1,5 +1,7 @@
 # Spring-BlogApi-Java
 This is a blog Api built in Java, it enables a user to post, view, edit and delete their blog post.
+## Resources
+`https://medium.com/@salisuwy/building-a-spring-boot-rest-api-part-ii-7ff1e4384b0b`
 ## Requirements(Building Blocks)
 - `Java`
 - `Springboot`
