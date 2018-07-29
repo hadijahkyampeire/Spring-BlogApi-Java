@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -22,9 +23,13 @@ public class BlogControllerTests {
     private MockMvc mockMvc;
     @Test
     public void getIndex() throws Exception{
-        mockMvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Congratulations BlogController.java")));
+        mockMvc.perform(MockMvcRequestBuilders.get("/blog").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
     }
+//    @Test
+//    public void getShow(@PathVariable String id) throws Exception{
+//        mockMvc.perform(MockMvcRequestBuilders.get("/blog/{id}").accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk());
+//    }
 
 }
